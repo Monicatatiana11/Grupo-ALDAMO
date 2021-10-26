@@ -57,16 +57,6 @@ background-color: #BED0D6;
     margin: 12px auto 12px auto;
 }
 
-
-
-.divPomoCompletado,.divPomoPendiente{
-    height: 40px;
-    margin: 2px;
-    border-radius: 10px;
-    background-color: #FFF;
-    border: 1px solid #6DC3CE;
+div{
+    border:1px dashed red;
 }
-.divPomoCompletado{
-    background-color: #F5F5F5;
-}
-
