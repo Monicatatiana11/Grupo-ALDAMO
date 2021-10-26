@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
+
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +9,55 @@
     <link rel="stylesheet" href="estilos.css">
     <title>Pomodoro List</title>
     <link rel="shortcut icon" href="images/Tom_trabajando.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 <body>
+<div class="divItemMenu1"><img class="imgMenu" src="images/menu_mobile_black.svg" alt="pendientes"></div>
 <aside class="asideMenu">
-    <div class="divItemMenu borde1"><img class="imgMenu" src="images/tom_check.svg" alt="pendientes"></div>
-    <div class="divItemMenu borde2"><img class="imgMenu" src="images/tom_proceso.svg" alt="en proceso"></div>
-    <div class="divItemMenu borde3"><img class="imgMenu" src="images/tom_checked.png" alt="completados"></div>
-    <div class="divItemMenu borde4"><img class="imgMenu" src="images/vertodos.svg" alt="ver todos"></div>
-    <div class="divItemMenu divBotonNuevo borde5"><img class="imgMenu " src="images/Boton_nuevo.svg" alt="agregar nuevo"></div>
+        <div class="divItemMenu2"><img class="imgMenu" src="images/menu_mobile_white.svg" alt="pendientes"></div>
+        <div id="Pendientes" class="divItemMenu borde1"><img class="imgMenu" src="images/tom_check.svg" alt="pendientes"></div>
+        <div id="En Proceso" class="divItemMenu borde2"><img class="imgMenu" src="images/tom_proceso.svg" alt="en proceso"></div>
+        <div id="Completados" class="divItemMenu borde3"><img class="imgMenu" src="images/tom_checked.png" alt="completados"></div>
+        <div id="Ver Todos" class="divItemMenu borde4"><img class="imgMenu" src="images/vertodos.svg" alt="ver todos"></div>
+        <div id="Agregar Nuevo" class="divItemMenu divBotonNuevo borde5"><img class="imgMenu " src="images/Boton_nuevo.svg" alt="agregar nuevo"></div>
 </aside>
 <main class="mainPrincipal">
-    <section class="sectionCompletados"><!--LLENAR CON JAVASCRIPT--></section>
-    <section class="sectionEnProceso"><!--LLENAR CON JAVASCRIPT--></section>
-    <section class="sectionPendientes"><!--LLENAR CON JAVASCRIPT--></section>
+    <section class="sectionCompletados"><!--LLENAR CON JAVASCRIPT-->
+        <h1>Completado</h1>
+    </section>
+    <section class="sectionEnProceso">
+        <div class="divControles">
+            <img class="botonControl" src="images/Play.png" alt="boton play">
+            <img class="botonControl" src="images/Stop.png" alt="boton stop">
+            <img class="botonControl" src="images/Pause.png" alt="boton pausa">
+        </div>
+        <div class="divTemporizador">
+            <div class="Timer">
+                <img class="tomTimer" src="images/tom_proceso.svg" alt="trabajando">
+            </div>
+            <!--JAVASCRIPT-->
+        </div>
+
+        
+    </section>
+    <section class="sectionPendientes"><!--LLENAR CON JAVASCRIPT-->
+        <h1>Pendientes</h1>
+    </section>
 </main>
+<main class="mainAgregar">
+    <table>
+        <h2>Nuevo</h2>
+        <input class="AgregarNueva" type="text" name="" id="" placeholder="Agregar tu nueva tarea">
+        <h2>
+            Descripción</h2>
+        <input class="Agregar" type="text" placeholder="Agregar una descripción">
+    </table>
+    <div class="botonesAgregar">
+        <button class="btn" >Subtareas</button>
+        <button class="btn" >Agregar</Button>
+        <button class="btn" >Cancelar</button>
+    </div>
+</main>
+<script type="module" src="script.js"></script>
 </body>
 </html>
