@@ -1,0 +1,62 @@
+*{
+    margin: 0%;
+    border: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: #E1F8FB;
+    height: 100vh;
+    display: flex;
+}
+.asideMenu{
+    background-color: #303044;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    width: 75px;
+    height: 100%;
+    align-items: center;
+    padding: 12px 0 12px 0;
+}
+.imgMenu{
+    width: 48px;
+}
+.divBotonNuevo{
+    position: absolute;
+    bottom: 12px;
+}
+.mainPrincipal{
+    width: 65%;
+    height: 90%;
+    border: dashed black;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.borde1{    border-right:5px solid #D1461F;}
+.borde2{    border-right:5px solid #FDBD35;}
+.borde3{    border-right:5px solid #84DB16;}
+.borde4{    border-right:5px solid #00ACC1;}
+.borde5{    border-right:5px solid #FFF;}
+
+.sectionCompletados,.sectionPendientes{
+width: 90%;
+height: 40px;
+}
+.sectionEnProceso{
+border-radius: 10px;
+width: 100%;
+height: 50px;
+background-color: #BED0D6;
+}
+.divItemMenu{
+    display: flex;
+    padding-left: 11px;
+    width: 100%;
+    margin: 12px auto 12px auto;
+}
+
+section{
+    border:1px dashed red;
+}
