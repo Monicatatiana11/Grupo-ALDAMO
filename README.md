@@ -1,20 +1,20 @@
 ![Aldamo Team](https://user-images.githubusercontent.com/58921913/138895570-1616a7ee-30ba-4c7a-a029-bbbfd7ad3a18.png)
 
 
-## PROYECTO: POMODORO - LISTA DE TAREAS
+##                                            PROYECTO: POMODORO - LISTA DE TAREAS
 
 Diseño
 Maquetado 
 Funcionalidad.
 
-### ENLACE FIGMA:
+###                                                  ENLACE FIGMA:
 https://www.figma.com/file/67HxvwbKnGADVPHqamMsdk/PomodorosToDoList?node-id=0%3A1
 
 
 #
 # DISEÑO
 
-### VERSION ESCRITORIO
+###                                          VERSION ESCRITORIO
 
 ![Desktop](https://user-images.githubusercontent.com/58921913/138895924-f67a0c59-40f2-47bf-8dbb-b5bca35790d9.jpg)
 ![Desplegar  katas](https://user-images.githubusercontent.com/58921913/138895962-8cfb9b72-2f17-48f3-bc6a-dc62a382ea73.jpg)
