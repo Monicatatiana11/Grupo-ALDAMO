@@ -1,14 +1,24 @@
-*{
-    margin: 0%;
-    border: 0%;
+* {
+    margin: 0;
+    border: 0;
     box-sizing: border-box;
+    font-family: "Indie Flower", sans-serif;
 }
-body{
+
+:focus {
+    outline: none;
+}
+
+body {
     background-color: #E1F8FB;
     height: 100vh;
     display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    min-width: 350px;
 }
-.asideMenu{
+
+.asideMenu {
     background-color: #303044;
     display: flex;
     position: fixed;
@@ -16,47 +26,218 @@ body{
     width: 75px;
     height: 100%;
     align-items: center;
-    padding: 12px 0 12px 0;
+    padding: 12px 0;
 }
-.imgMenu{
+.imgMenu {
     width: 48px;
 }
-.divBotonNuevo{
+.divBotonNuevo {
     position: absolute;
+    left: 0;
     bottom: 12px;
 }
-.mainPrincipal{
+.mainPrincipal,
+.mainAgregar {
     width: 65%;
     height: 90%;
-    border: dashed black;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.borde1{    border-right:5px solid #D1461F;}
-.borde2{    border-right:5px solid #FDBD35;}
-.borde3{    border-right:5px solid #84DB16;}
-.borde4{    border-right:5px solid #00ACC1;}
-.borde5{    border-right:5px solid #FFF;}
+.mainAgregar {
+    display: none;
+}
 
-.sectionCompletados,.sectionPendientes{
-width: 90%;
-height: 40px;
+.borde1 {
+    border-right: 5px solid #D1461F;
 }
-.sectionEnProceso{
-border-radius: 10px;
-width: 100%;
-height: 50px;
-background-color: #BED0D6;
+.borde2 {
+    border-right: 5px solid #FDBD35;
 }
-.divItemMenu{
+.borde3 {
+    border-right: 5px solid #84DB16;
+}
+.borde4 {
+    border-right: 5px solid #00ACC1;
+}
+.borde5 {
+    border-right: 5px solid #FFF;
+}
+.sectionCompletados,
+.sectionPendientes {
+    width: 90%;
+}
+.sectionEnProceso {
+    border-radius: 10px;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 200px;
+    background-color: #BED0D6;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+}
+.divControles {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.divItemMenu,
+.divItemMenu1,
+.divItemMenu2 {
     display: flex;
     padding-left: 11px;
     width: 100%;
-    margin: 12px auto 12px auto;
+    margin: 12px auto;
 }
 
-section{
-    border:1px dashed red;
+.divItemMenu1,
+.divItemMenu2 {
+    display: none;
+    cursor: pointer;
+}
+
+.divItemActivo {
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+}
+.divHover {
+    width: 200px;
+    font-size: 20px;
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgb(143, 143, 143);
+}
+
+/*CONTENEDOR POMODOROS DE UNO EN UNO*/
+.divPomodoro {
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    border-radius: 10px;
+    border: 1px solid #6DC3CE;
+    min-height: 40px;
+    width: 100%;
+    margin: 2px 0;
+}
+
+.pomodoroCompletado,
+.pomodoroPendiente {
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 5px;
+    background-size: 25px;
+    padding-left: 40px;
+}
+.pomodoroPendiente {
+    border-left: 8px solid #D1461F;
+    background-image: url('images/tom_check.svg');
+}
+.pomodoroCompletado {
+    border-left: 8px solid #84DB16;
+    text-decoration: line-through;
+    background-image: url('images/tom_checked.png');
+    background-size: 30px;
+}
+.pomodoroProceso {
+    font-size: 20px;
+    border-left: 8px solid #FDBD35;
+    padding-left: 20px;
+    min-height: 50px;
+    max-width: 95%;
+}
+
+.divTemporizador {
+    width: 80%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.Timer {
+    border-radius: 5px;
+    width: 100%;
+    height: 10px;
+    background-color: #D33030;
+    display: flex;
+    justify-content: flex-end;
+    animation: recortar 60s both linear;
+}
+@keyframes recortar {
+    100% {
+        width: 20px;
+    }
+}
+.tomTimer {
+    margin-top: -25px;
+    margin-right: -5px;
+    height: 60px;
+    transform-origin: center;
+    animation: tomDancing 1.5s infinite linear;
+}
+@keyframes tomDancing {
+    30% {
+        transform: rotate(10deg);
+    }
+    66% {
+        transform: rotate(-10deg);
+    }
+}
+
+.btn {
+    width: 120px;
+    height: 35px;
+    background-color: #303044;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.btn:hover {
+    background-color: #b2b2c0;
+    color: black;
+}
+
+.AgregarNueva,
+.Agregar {
+    width: 100%;
+    height: 40px;
+    border-radius: 7px;
+    border: 1px solid #6DC3CE;
+}
+
+.Agregar {
+    height: 200px;
+}
+.botonesAgregar {
+    margin-top: 30px;
+    align-self: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    justify-content: space-between;
+}
+
+@media only screen and(max-width:800px) {
+    body{
+        background-color:red
+    }
+    
+    .divItemMenu1 {
+        display: block;
+        width: auto;
+        position: absolute;
+    }
+    .asideMenu {
+        display: none;
+    }
+    .mostrar {
+        display: flex;
+    }
 }
