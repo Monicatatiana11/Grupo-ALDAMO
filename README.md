@@ -1,5 +1,3 @@
-
-
 ![Aldamo Team](https://user-images.githubusercontent.com/58921913/138895570-1616a7ee-30ba-4c7a-a029-bbbfd7ad3a18.png)
 
 
