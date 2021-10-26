@@ -1,0 +1,27 @@
+<svg width="26" height="28" viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_15:264" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="26" height="9">
+<rect x="0.964355" y="0.775146" width="25" height="7.46985" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask0_15:264)">
+<circle cx="12.1534" cy="13.1586" r="9.56115" fill="#CF433B"/>
+<path d="M6.67631 5.72445C6.34253 6.33309 6.24269 7.45065 6.2345 7.93334C6.2345 7.75669 7.78891 6.69798 8.56611 6.19071C8.8999 6.77967 10.5705 7.95779 11.364 8.47323C11.5604 7.3197 10.3578 6.23979 10.4805 5.96982C10.5787 5.75384 12.5667 6.43614 13.5484 6.80429C13.4502 6.03854 12.2803 5.33988 11.7076 5.08626C11.5702 4.79167 12.9594 3.89999 13.6711 3.49098C13.2195 3.11789 11.0613 3.33552 10.0387 3.49098C10.0387 1.50789 8.77882 1.50299 8.14887 1.74843C8.87535 2.16075 8.8279 3.08193 8.71337 3.49098C8.0507 2.46016 4.2465 2.97561 5.08097 3.0247C5.74855 3.06397 6.55356 3.66282 6.87263 3.95733C6.4014 3.80025 4.811 4.89 4.07471 5.45451L6.67631 5.72445Z" fill="#40803C" stroke="#40803C"/>
+</g>
+<mask id="mask1_15:264" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="19" width="26" height="9">
+<rect x="25.9644" y="27.0296" width="25" height="7.46985" transform="rotate(180 25.9644 27.0296)" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask1_15:264)">
+<circle cx="14.7753" cy="14.0914" r="9.56115" transform="rotate(180 14.7753 14.0914)" fill="#CF433B"/>
+</g>
+<mask id="mask2_15:264" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="3" y="8" width="23" height="7">
+<rect x="3.5957" y="8.73578" width="22.3684" height="5.8859" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask2_15:264)">
+<ellipse cx="14.4728" cy="12.4849" rx="9.56115" ry="9.56115" fill="#CF433B"/>
+</g>
+<mask id="mask3_15:264" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="15" width="24" height="5">
+<rect x="23.333" y="19.0691" width="22.3684" height="3.95676" transform="rotate(-180 23.333 19.0691)" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask3_15:264)">
+<ellipse cx="12.4559" cy="16.5488" rx="9.56115" ry="6.42742" transform="rotate(-180 12.4559 16.5488)" fill="#CF433B"/>
+</g>
+</svg>
