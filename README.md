@@ -14,6 +14,14 @@ https://www.figma.com/file/67HxvwbKnGADVPHqamMsdk/PomodorosToDoList?node-id=0%3A
 #
 # DISEÑO
 
+1 día organizamos las ideas de los 3 realizamos dos diseños el cual nos quedamos con el de tomaticos que es el que estamos realizando ya que nos llamo la atención la dinamica lo diferente, unico y pues las ideas que se nos vinieron en nuestra cabeza funcionaban por tal motivo elegimos  ese y se  realizo el figma completo con prototype y demas funcionalidas.
+
+
+2 día realizamos el maqueteo y nos colocamos a mirar como íbamos a distribuirnos las funcionalidades realizamos lo que fue la parte de los checks lo inputs el menú principal todo el JS.
+
+
+3 día se realizo subir los datos al LocalStorage y funcionalidad como el editar el eliminar, el temporizador el botón, también realizar la funcionalidad y animación del play,stop y pausa se realizo, cada menú principal ya está funcionando correctamente este día estuvimos muy apoyados trabajando entre los 3 todo.
+
 ###                                          VERSION ESCRITORIO
 
 ![Desktop](https://user-images.githubusercontent.com/58921913/138895924-f67a0c59-40f2-47bf-8dbb-b5bca35790d9.jpg)
