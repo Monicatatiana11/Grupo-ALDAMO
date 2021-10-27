@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 <body>
+    <img class="btnConfig" src="images/Configuracion.png" alt="config">
 <div class="divItemMenu1"><img class="imgMenu" src="images/menu_mobile_black.svg" alt="pendientes"></div>
+
 <aside class="asideMenu">
         <div class="divItemMenu2"><img class="imgMenu" src="images/menu_mobile_white.svg" alt="pendientes"></div>
         <div id="Pendientes" class="divItemMenu borde1"><img class="imgMenu" src="images/tom_check.svg" alt="pendientes"></div>
@@ -27,18 +27,18 @@
     </section>
     <section class="sectionEnProceso">
         <div class="divControles">
-            <img class="botonControl" src="images/Play.png" alt="boton play">
-            <img class="botonControl" src="images/Stop.png" alt="boton stop">
-            <img class="botonControl" src="images/Pause.png" alt="boton pausa">
+            <img id="play" class="botonControl" src="images/Play.png" alt="boton play">
+            <img id="stop" class="botonControl" src="images/Stop.png" alt="boton stop">
+            <img id="pause" class="botonControl" src="images/Pause.png" alt="boton pausa">
         </div>
         <div class="divTemporizador">
             <div class="Timer">
                 <img class="tomTimer" src="images/tom_proceso.svg" alt="trabajando">
             </div>
+            <audio id="alarma" src="src/clipdealer_1094705_preview.mp3"></audio>
             <!--JAVASCRIPT-->
         </div>
 
-        
     </section>
     <section class="sectionPendientes"><!--LLENAR CON JAVASCRIPT-->
         <h1>Pendientes</h1>
@@ -52,12 +52,29 @@
             Descripción</h2>
         <input class="Agregar" type="text" placeholder="Agregar una descripción">
     </table>
+    <div class="subtareas">
+        <h2 class="tituloSub">Ingresa las Subtareas</h2>
+    </div>
     <div class="botonesAgregar">
-        <button class="btn" >Subtareas</button>
+        <button class="btn" id="botonSubtareas" >Subtareas</button>
         <button class="btn" >Agregar</Button>
         <button class="btn" >Cancelar</button>
     </div>
 </main>
+<section class="sectionConfiguracion oculto">
+    <h2>ingrese la duracion de cada pomodoro</h2>
+    <div class="divconfig config1">
+        <button class="btnMenos">-</button>
+        <input class="inputs" disabled type="text" value="25">
+        <button class="btnMas">+</button>    
+    </div><br><br>
+    <h2>ingrese la duracion de cada descanzo</h2>
+    <div class="divconfig config2">
+        <button class="btnMenos">-</button>
+        <input class="inputs" disabled type="text" value="5">
+        <button class="btnMas">+</button>    
+    </div>   
+</section>
 <script type="module" src="script.js"></script>
 </body>
 </html>
