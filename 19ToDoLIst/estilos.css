@@ -4,11 +4,9 @@
     box-sizing: border-box;
     font-family: "Indie Flower", sans-serif;
 }
-
 :focus {
     outline: none;
 }
-
 body {
     background-color: #E1F8FB;
     height: 100vh;
@@ -17,7 +15,6 @@ body {
     font-weight: 600;
     min-width: 350px;
 }
-
 .asideMenu {
     background-color: #303044;
     display: flex;
@@ -37,7 +34,8 @@ body {
     bottom: 12px;
 }
 .mainPrincipal,
-.mainAgregar {
+.mainAgregar,
+.mainHome{
     width: 65%;
     height: 90%;
     margin: auto;
@@ -45,10 +43,12 @@ body {
     flex-direction: column;
     align-items: center;
 }
-.mainAgregar {
+.mainAgregar,.mainPrincipal{
     display: none;
 }
-
+.borde0{
+    border-right: 5px solid #000000;
+}
 .borde1 {
     border-right: 5px solid #D1461F;
 }
@@ -101,6 +101,8 @@ body {
     align-items: center;
     flex-direction: column;
     padding:50px 20px;
+    height: 500px;
+    justify-content: space-between;
 }
 .divconfig{
     display: flex;
@@ -114,10 +116,6 @@ body {
 }
 h2{
     text-align: center;
-}
-.oculto{
-    width: 150px;
-    display: none;
 }
 .botonControl:hover{
     transform: scale(1.5);
@@ -149,7 +147,11 @@ button:hover{
 
 .btnMas{border-radius: 0 50% 50% 0;}
 .btnMenos{border-radius: 50% 0 0 50%;}
-
+.btnGuardarConfiguracion{
+    width: 100%;
+    border-radius: 15px;
+    font-size: 30px;
+}
 .divItemMenu,
 .divItemMenu1,
 .divItemMenu2 {
@@ -164,7 +166,6 @@ button:hover{
     display: none;
     cursor: pointer;
 }
-
 .divItemActivo {
     width: 280px;
     display: flex;
@@ -179,7 +180,6 @@ button:hover{
     justify-content: center;
     box-shadow: 0 0 10px rgb(143, 143, 143);
 }
-
 .divPomodoro {
     justify-content: space-between;
     display: flex;
@@ -192,7 +192,6 @@ button:hover{
     margin: 2px 0;
     flex-wrap: wrap;
 }
-
 .pomodoroCompletado,
 .pomodoroPendiente {
     background-repeat: no-repeat;
@@ -218,7 +217,6 @@ button:hover{
     min-height: 50px;
     max-width: 95%;
 }
-
 .divTemporizador {
     width: 80%;
     height: 60px;
@@ -235,13 +233,20 @@ button:hover{
     display: flex;
     justify-content: flex-end;
 }
-
+#btnVolume:hover{
+    transform: scale(1.5);
+}
+#btnSubtareas:hover{
+    transform: scale(1.5);
+}
+.muted{
+    border-radius: 50%;
+    background-color: #D33030;
+}
 .container{    
     width: 100%;
     height: 100%;
 }
-
-
 .tomTimer {
     margin-top: -25px;
     margin-right: -5px;
@@ -249,7 +254,10 @@ button:hover{
     transform-origin: center;
     animation: tomDancing 1.5s infinite linear;
 }
-
+.oculto{
+    width: 150px;
+    display: none;
+}
 @keyframes tomDancing {
     30% {
         transform: rotate(10deg);
@@ -258,7 +266,11 @@ button:hover{
         transform: rotate(-10deg);
     }
 }
-
+.mostrarSubtareas{
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
 .btn {
     width: 120px;
     height: 35px;
@@ -267,12 +279,10 @@ button:hover{
     border-radius: 5px;
     font-size: 20px;
 }
-
 .btn:hover {
     background-color: #b2b2c0;
     color: black;
 }
-
 .AgregarNueva,
 .Agregar {
     padding-left: 20px;
@@ -281,7 +291,6 @@ button:hover{
     border-radius: 7px;
     border: 1px solid #6DC3CE;
 }
-
 .Agregar {
     height: 200px;
 }
@@ -293,13 +302,42 @@ button:hover{
     width: 50%;
     justify-content: space-between;
 }
-
 .tituloSub{
     display: none;
 }
-
-@media only screen and (max-width: 600px) {
-        
+#check{
+    width: 25px;
+    height: 25px;
+}
+.subtareas{
+    align-self: flex-end;
+    width: 60%;
+}
+.agregarSubtareas{
+    display: flex;
+    margin-top: 10px;
+}
+.ingSubtarea{
+    border: 1px solid #6DC3CE;
+    width: 100%;
+    margin-left: 5px;
+    border-radius: 4px;
+}
+.mainHome h1{
+    font-size: 60px;
+}
+.mainHome h2{
+    font-size: 30px;
+}
+table{
+    margin-top: 20px;
+    font-size: 20px;
+}
+td img{
+    width: 60px;
+    height: 60px;
+}
+@media only screen and (max-width: 750px) {        
     .divItemMenu1 {
         display: block;
         width: auto;
