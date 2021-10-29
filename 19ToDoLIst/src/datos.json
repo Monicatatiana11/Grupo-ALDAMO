@@ -1,0 +1,200 @@
+[
+    {
+        "id":"1",
+        "tarea": "Realizar Katas",
+        "descripcion": "Realizar 2 katas por día",
+        "estado": "Pendiente",
+        "subtareas": [
+            {
+                "subtarea": "Estructurar en HTML",
+                "estado": "Completado"
+            },
+            {
+                "subtarea": "Realizar Kata #45",
+                "estado": "Pendiente"
+            }
+        ]
+    },
+    {
+        "id":"2",
+        "tarea": "Crear iconos",
+        "descripcion": "crear iconos para el diseño",
+        "estado": "Completado",
+        "subtareas": []
+    },
+    {
+        "id":"3",
+        "tarea": "Estructurar elementos",
+        "descripcion": "Estructura elementos en el figma para realizarlos en HTML",
+        "estado": "Proceso",
+        "subtareas": [
+            {
+                "subtarea": "Estructurar en HTML",
+                "estado": "Completado"
+            },
+            {
+                "subtarea": "Realizar Kata #45",
+                "estado": "Pendiente"
+            }
+        ]
+    },
+    {
+        "id":"4",
+        "tarea": "Realizar figma",
+        "descripcion": "Realizar el diseño y definir medidas",
+        "estado": "Pendiente",
+        "subtareas": [
+            {
+                "subtarea": "Realizar el diseño de iconos",
+                "estado": "Pendiente"
+            }
+        ]
+    },
+    {
+        "id":"5",
+        "tarea": "Realizar maquetado",
+        "descripcion": "Esctructurar en HTML",
+        "estado": "Completado",
+        "subtareas": [
+            {
+                "subtarea": "selccionar tipo de fuentes",
+                "estado": "Pendiente"
+            }
+        ]
+    },
+    {
+        "id":"6",
+        "tarea": "Definir estilos en CSS",
+        "descripcion": "Mejorar la parte visual de la pagina",
+        "estado": "Pendiente",
+        "subtareas": [
+            {
+                "subtarea": "Diseño de la pagina en Flex Box",
+                "estado": "Pendiente"
+            }
+        ]
+    },
+    {
+        "id":"7",
+        "tarea": "Realizar adelanto de código JavaScript",
+        "descripcion": "Seleccionar y realizar la funcionabilidad de la pagina",
+        "estado": "Pendiente",
+        "subtareas": []
+    },
+    {
+        "id":"8",
+        "tarea": "Realizar funcionalidad de botones",
+        "descripcion": "En JavaScript aplicar eventos a los botones",
+        "estado": "Completado",
+        "subtareas": [
+            {
+                "subtarea": "Realizar el hover a cada botón",
+                "estado": "Pendiente"
+            }
+        ]
+    },
+    {
+        "id":"9",
+        "tarea": "Realizar refactorización códigos",
+        "descripcion": "Revisar el codigo y refactorizar el codigo que sea mas corto y mas legible",
+        "estado": "Pendiente",
+        "subtareas": []
+    },
+    {
+        "id":"10",
+        "tarea": "Realizar Katas",
+        "descripcion": "Realizar 2 katas por día",
+        "estado": "Pendiente",
+        "subtareas": [
+            {
+                "subtarea": "Estructurar en HTML",
+                "estado": "Completado"
+            },
+            {
+                "subtarea": "Realizar Kata #45",
+                "estado": "Pendiente"
+            }
+        ]
+    },
+    {
+        "id":"11",
+        "tarea": "Crear iconos",
+        "descripcion": "crear iconos para el diseño",
+        "estado": "Completado",
+        "subtareas": []
+    },
+    {
+        "id":"12",
+        "tarea": "Estructurar elementos",
+        "descripcion": "Estructura elementos en el figma para realizarlos en HTML",
+        "estado": "Completado",
+        "subtareas": [
+            {
+                "subtarea": "Estructurar en HTML",
+                "estado": "Completado"
+            }
+        ]
+    },
+    {
+        "id":"13",
+        "tarea": "Realizar figma",
+        "descripcion": "Realizar el diseño y definir medidas",
+        "estado": "Pendiente",
+        "subtareas": [
+            {
+                "subtarea": "Realizar el diseño de iconos",
+                "estado": "Pendiente"
+            }
+        ]
+    },
+    {
+        "id":"14",
+        "tarea": "Realizar maquetado",
+        "descripcion": "Esctructurar en HTML",
+        "estado": "Completado",
+        "subtareas": [
+            {
+                "subtarea": "selccionar tipo de fuentes",
+                "estado": "Pendiente"
+            }
+        ]
+    },
+    {
+        "id":"15",
+        "tarea": "Definir estilos en CSS",
+        "descripcion": "Mejorar la parte visual de la pagina",
+        "estado": "Pendiente",
+        "subtareas": [
+            {
+                "subtarea": "Diseño de la pagina en Flex Box",
+                "estado": "Pendiente"
+            }
+        ]
+    },
+    {
+        "id":"16",
+        "tarea": "Realizar adelanto de código JavaScript",
+        "descripcion": "Seleccionar y realizar la funcionabilidad de la pagina",
+        "estado": "Pendiente",
+        "subtareas": []
+    },
+    {
+        "id":"17",
+        "tarea": "Realizar funcionalidad de botones",
+        "descripcion": "En JavaScript aplicar eventos a los botones",
+        "estado": "Completado",
+        "subtareas": [
+            {
+                "subtarea": "Realizar el hover a cada botón",
+                "estado": "Pendiente"
+            }
+        ]
+    },
+    {        
+        "id":"18",
+        "tarea": "Realizar refactorización códigos",
+        "descripcion": "Revisar el codigo y refactorizar el codigo que sea mas corto y mas legible",
+        "estado": "Pendiente",
+        "subtareas": []
+    }
+]
