@@ -22,6 +22,12 @@ https://www.figma.com/file/67HxvwbKnGADVPHqamMsdk/PomodorosToDoList?node-id=0%3A
 
 3 día se realizo subir los datos al LocalStorage y funcionalidad como el editar el eliminar, el temporizador el botón, también realizar la funcionalidad y animación del play,stop y pausa se realizo, cada menú principal ya está funcionando correctamente este día estuvimos muy apoyados trabajando entre los 3 todo.
 
+4 dia:
+Se realizo la conexión al LocalStorage ya que quedo fallando, se realizo el temporizador que supiera cuando estuviera trabajando y descansando, estuvimos validando lo del hosting y dominio lo cual decidimos comprar uno q encontramos economico por 1 mes lo cual como se realizo el jueves esta activo hasta el sabado lo cual no sabiamos pero vamos  a ver como nos queda en cuanto suba.
+
+5 dia verificamos estilos que se dañaron al momento de las funcionalidas, hemos estado validando algunas funcionalidades que nos fallaron estamos preparando la sustentación
+
+
 ###                                          VERSION ESCRITORIO
 
 ![Desktop](https://user-images.githubusercontent.com/58921913/138895924-f67a0c59-40f2-47bf-8dbb-b5bca35790d9.jpg)
