@@ -3,52 +3,76 @@ if (localStorage.length == 0) {
     alert("se cargaron los datos")
     const data = await fetch("./src/datos.json");
     const pomodorosdata = await data.json();
-    localStorage.setItem("pomodoros", JSON.stringify(pomodorosdata));
+    pomodorosdata.forEach(temp => {
+        let obj = {
+                "id": temp.id,
+                "tarea": temp.tarea,
+                "descripcion": temp.descripcion,
+                "estado": temp.estado,
+                "subtareas": []
+        }
+        let arr = [];
+            if (temp.subtareas != "") {
+            temp.subtareas.forEach(sub => {
+                let obj={
+                        "subtarea": sub.subtarea,
+                        "estado": sub.estado
+                }
+                arr.push(obj)
+            });
+        } else {
+            arr =[]
+        }
+        obj.subtareas=arr;
+        localStorage.setItem(localStorage.length+1, JSON.stringify(obj));
+    });
 }
 // LLENAR LAS LISTAS
-let pomodoros = JSON.parse(localStorage.getItem("pomodoros"))
 const sectionCompletados = document.querySelector('.sectionCompletados');
-const sectionEnProceso = document.querySelector('.sectionEnProceso');
+let sectionEnProceso = document.querySelector('.sectionEnProceso');
 const sectionPendientes = document.querySelector('.sectionPendientes');
-pomodoros.forEach(p => {
-    let divPomodoro = document.createElement('div');
-    let txtPomodoro = document.createElement('p');
-    let sub = p.subtareas != "" ? "images/CardChecklistOk.svg" : "images/checkno.svg"
-    divPomodoro.classList.add('divPomodoro');
-    txtPomodoro.classList.add('txtPomodoro');
-    txtPomodoro.textContent = p.tarea;
-    divPomodoro.append(txtPomodoro);
-    if (p.estado === "Pendiente") {
-        divPomodoro.classList.add('pomodoroPendiente');
-        sectionPendientes.append(divPomodoro);
-        divPomodoro.innerHTML += `
-        <div class="divControles oculto">
-        <img id="borrar" src="images/Delete Bin.png">
-        <img id="editar" src="images/Edit.png">
-        <img id="subtareas" src="${sub}">
-        </div>`
-    } else if (p.estado === "Completado") {
-        divPomodoro.classList.add('pomodoroCompletado');
-        sectionCompletados.append(divPomodoro);
-        divPomodoro.innerHTML += `
-        <div class="divControles oculto">
-        <img id="borrar" src="images/Delete Bin.png">
-        <img id="subtareas" src="${sub}">
-        </div>`
-    } else {
+llenado();
+function llenado() {
+    for (let i = 0; i < localStorage.length; i++) {
+        let p = JSON.parse(localStorage.getItem(i+1));
+        let divPomodoro = document.createElement('div');
+        let txtPomodoro = document.createElement('p');
         let sub = p.subtareas != "" ? "images/CardChecklistOk.svg" : "images/checkno.svg"
-        divPomodoro.classList.add('pomodoroProceso');
-        sectionEnProceso.append(divPomodoro);
-        divPomodoro.innerHTML += `<img src="${sub}">`
-        sectionEnProceso.innerHTML += `
-        <p class="txtDescripcion">${
-            p.descripcion
-        }</p>
-        <img id="btnVolume" src="images/volume.svg" alt="volumen">
-        <img id="btnSubtareas" src="images/flecha.svg" alt="mas">
-        `;
+        divPomodoro.classList.add('divPomodoro');
+        txtPomodoro.classList.add('txtPomodoro');
+        txtPomodoro.textContent = p.tarea;
+        divPomodoro.append(txtPomodoro);
+        if (p.estado === "Pendiente") {
+            divPomodoro.classList.add('pomodoroPendiente');
+            sectionPendientes.append(divPomodoro);
+            divPomodoro.innerHTML += `
+            <div id="${p.id}" class="divControles oculto">
+            <img id="borrar${p.id}" class="borrar" src="images/Delete Bin.png">
+            <img class="editar" id="${p.id}" src="images/Edit.png">
+            <img class="subs" id="subtareas${p.id}" src="${sub}">
+            </div>`
+        } else if (p.estado === "Completado") {
+            divPomodoro.classList.add('pomodoroCompletado');
+            sectionCompletados.append(divPomodoro);
+            divPomodoro.innerHTML += `
+            <div id="${p.id}" class="divControles oculto">
+            <img class="borrar" id="borrar${p.id}" class="borrar" src="images/Delete Bin.png">
+            <img class="subs" id="subtareas${p.id}" src="${sub}">
+            </div>`
+        } else if (p.estado === "Proceso"){
+            let sub = p.subtareas != "" ? "images/CardChecklistOk.svg" : "images/checkno.svg"
+            divPomodoro.classList.add('pomodoroProceso');
+            sectionEnProceso.append(divPomodoro);
+            divPomodoro.innerHTML += `<img src="${sub}">`
+            sectionEnProceso.innerHTML += `
+            <p class="txtDescripcion">${p.descripcion}</p>
+            <img id="btnVolume" src="images/volume.svg" alt="volumen">
+            <img id="btnSubtareas" src="images/flecha.svg" alt="mas">
+            `;
+        }
     }
-})
+    
+}
 // DESPLEGAR BOTONES MENU LATERAL
 Array.from(document.querySelectorAll('.divItemMenu')).map((boton) => {
     let divHover = document.createElement('div');
@@ -133,13 +157,14 @@ function settime() {
             document.querySelector('#tomDescanzando').classList.toggle('oculto');
             restante = total;
             timer.style.width = `100%`;
+            llenado();
             if (document.querySelector('#tomDescanzando').classList.contains('oculto') == true) {
                 total = 1 * 60;
                 console.log("trabajando")
                 console.log(total / 60)
                 restante = total;
             } else {
-                total = 5 * 60;
+                total = .5 * 60;
                 console.log("descanzando")
                 console.log(total / 60)
                 restante = total;
@@ -147,6 +172,9 @@ function settime() {
         }
     }
 }
+
+
+
 // BOTON MUTE ///////////////////////////////////////////////////////////
 document.querySelector('#btnVolume').addEventListener('click', () => {
     document.getElementById('alarma').muted = !document.getElementById('alarma').muted;
@@ -154,8 +182,11 @@ document.querySelector('#btnVolume').addEventListener('click', () => {
 })
 // BOTON VER SUBTAREAS ////////////////////////////////////////////////////
 document.querySelector('#btnSubtareas').addEventListener('click', () => {
-    pomodoros.forEach(pomodoro => {
-        if (pomodoro.estado === "Proceso") {
+document.querySelector('#btnSubtareas').classList.toggle('desplegado');
+if (document.querySelector('#btnSubtareas').classList.contains('desplegado')) {
+    for (let i = 0; i < localStorage.length; i++) {
+        let pomodoro = JSON.parse(localStorage.getItem(i+1));
+            if (pomodoro.estado === "Proceso") {
             if (pomodoro.subtareas != "") {
                 pomodoro.subtareas.forEach(sub => {
                 sectionEnProceso.innerHTML+=`
@@ -164,20 +195,24 @@ document.querySelector('#btnSubtareas').addEventListener('click', () => {
                         <p>${sub.subtarea}</p>
                     </div>`
                 });
-            } else {                
+            } else {
                 sectionEnProceso.innerHTML+=`
             <div class="mostrarSubtareas">
                 <p>NO HAY SUBTAREAS ASIGNADAS</p>
             </div>`
             }
         }
-    });
+    };
+}else{
+    document.querySelector('.mostrarSubtareas').remove(this)
+}
+
 })
 // HOVER POMODOROS PENDIENTES /////////////////////////////////////////////
 Array.from(document.querySelectorAll('.pomodoroPendiente')).map((pendiente) => {
     pendiente.addEventListener('mouseenter', () => {
         pendiente.querySelector('.oculto').style.display = "flex";
-        pendiente.querySelector('.oculto').querySelector('#borrar').addEventListener('click', () => {
+        pendiente.querySelector('.oculto').querySelector('.borrar').addEventListener('click', () => {
             pendiente.remove()
         })
     })
@@ -189,7 +224,7 @@ Array.from(document.querySelectorAll('.pomodoroPendiente')).map((pendiente) => {
 Array.from(document.querySelectorAll('.pomodoroCompletado')).map((completo) => {
     completo.addEventListener('mouseenter', () => {
         completo.querySelector('.oculto').style.display = "flex";
-        completo.querySelector('.oculto').querySelector('#borrar').addEventListener('click', () => {
+        completo.querySelector('.oculto').querySelector('.borrar').addEventListener('click', () => {
             completo.remove()
         })
     })
@@ -217,20 +252,63 @@ document.getElementById('botonSubtareas').addEventListener('click', () => {
     agregarSubtareas.innerHTML += `
     <div class="agregarSubtareas">
         <input type="checkbox" name="" id="check">
-        <input type="text" name="" class="ingSubtarea" id="tareaNueva">
-    </div>
-    `
+        <input type="text" name="" class="ingSubtarea in" id="tareaNueva">
+    </div>`
 })
 // BOTON AGREGAR//////
 document.getElementById('agregar').addEventListener('click', () => {
-    let nuevo = [];
+    let obj = {};
+    let arr = [];
     Array.from(document.querySelectorAll('#tareaNueva')).map((e) => {
         if (e.value == '') {
             alert('Completa los campos')
         } else {
-            nuevo.push(e.value);
-        }
-    })
-    localStorage.setItem(localStorage.length + 1, JSON.stringify(nuevo));
+            obj = {
+                "id": localStorage.length + 1,
+                "tarea": document.querySelector('.AgregarNueva').value,
+                "descripcion": document.querySelector('.Agregar').value,
+                "estado": "Pendiente",
+                "subtareas": []
+            }
+            arr = [];
+            Array.from(document.querySelectorAll('.ingSubtarea')).map((inp)=>{
+                if (inp.value != "") {
+                        let objsub={
+                                "subtareas": inp.value,
+                                "estado": "Pendiente"
+                                 }
+                        arr.push(objsub)
+                    }
+                });
+            }
+        })
+    obj.subtareas=arr;
+    localStorage.setItem(localStorage.length+1, JSON.stringify(obj));
+Array.from(document.querySelectorAll('.in')).map((e)=>{e.value="";})
 });
-document.getElementById('botonSubtareas').addEventListener('click', subtareas());
+
+//Actualizar
+
+Array.from(document.querySelectorAll('.editar')).map((e)=>{
+    e.addEventListener('click',()=>{
+        console.log(e)
+        editar(e.id)
+    }
+    )
+})
+
+function editar(f) {
+    console.log(f)    
+     let tarea = JSON.parse(localStorage.getItem(f));
+     console.log(tarea)
+    tarea.tarea = document.getElementById('modificar').value;
+        if(tarea == ''){
+            alert('Completa los campos');
+        }else{
+            localStorage.setItem(f, JSON.stringify(tarea));
+        }
+ }
+
+// ESTOS SON LAS CLASES PARA LLAMARLOS borrar editar subs
+
+//GRUPO ALDAMO LOS MAS PROOS DEL MUNDO MUNDIAL ASI GUASHHHHH PUFFFFFFFFFF ///////////////
