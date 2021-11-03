@@ -10,6 +10,16 @@ Funcionalidad.
 ###                                                  ENLACE FIGMA:
 https://www.figma.com/file/67HxvwbKnGADVPHqamMsdk/PomodorosToDoList?node-id=0%3A1
 
+Hosting pagado por nosotros
+
+https://grupoaldamo.online/
+
+Hosting gratuito
+https://aldamos.000webhostapp.com/
+
+
+
+
 
 #
 # DISEÑO
